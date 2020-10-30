@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="card mb-4 mt-4">
+  <div class="card-header">
+    <h4>Login To Your Account</h4>
+
+  </div>
+  <div class="card-body ">
+    <form method="POST" class="p-2">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit">Login</button>
+        
+        <!-- <input type="checkbox"  checked="checked">Remember me	 -->
+      </div>
+      
+      <div class="bottom" style="background:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="">Password?</a></span>
+    </form>
+  </div>
+</div>
+{% endblock %}
